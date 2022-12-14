@@ -21,3 +21,21 @@ def view_all():
         created_book = Book(book['id'], book['title'], author)
         books.append(created_book)
     return books
+
+def select_all():
+    books = []
+
+    sql = "SELECT * FROM books"
+    results = run_sql(sql)
+
+    for row in results:
+        book = Book(row['title'], row['author_id'], row['id'] )
+        print(book)
+        books.append(book)
+    return books
+
+def delete(id):
+    sql = "DELETE FROM books WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
