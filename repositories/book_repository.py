@@ -27,13 +27,20 @@ def select_all():
     sql = "SELECT * FROM books"
     results = run_sql(sql)
 
+    #find each book (row) from db
     for row in results:
+
+        #get the author object from other database
         author_id = row['author_id']
-        author = author_repository.select(author_id)
+        author = author_repository.select(author_id) 
+
         #need to insert an author object
         book = Book(row['title'], author, row['id'] )
+
+        # debugging print statments
         print("")
         print(book.__dict__)
+        
         books.append(book)
     return books
 
