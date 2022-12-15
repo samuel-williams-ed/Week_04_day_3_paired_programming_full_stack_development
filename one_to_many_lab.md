@@ -2,14 +2,27 @@
 
 Your task is to model a Flask app which contains 2 classes that have a One To Many relationship.
 
-- Authors and Books
+- Authors
+--- id
+--- name
+--- age
+--- fav_motto
+
+- Books
+--- id
+--- title
+--- author
 
 ## MVP
 
 In your application you should be able to perform the following actions:
 
-* View all Books along with detail of the Author (name/title/etc)
-* Delete a Book
+> View all Books along with detail of the Author (name/title/etc)
+> Delete a Book
+
+# make html page
+# make html handler - 'controllers'
+# feed all books list into html
 
 ### Extensions
 
@@ -35,6 +48,7 @@ In your application you should be able to perform the following actions:
     - Seed some Authors and Books
     - Create `select_all`
     - Make the route to show all Books
+
     - Create template to show all Books
     - And repeat, moving from back-end to front-end as you complete CRUD
 

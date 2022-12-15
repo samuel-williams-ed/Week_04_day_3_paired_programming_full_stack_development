@@ -5,3 +5,6 @@ class Author():
         self.age = age
         self.fav_motto = fav_motto
         self.id = id
+
+    def get_name(self):
+        return self.name

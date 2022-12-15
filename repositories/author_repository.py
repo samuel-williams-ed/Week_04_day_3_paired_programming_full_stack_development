@@ -18,6 +18,6 @@ def select(author_id):
 
     result = full_results[0]
     if result is not None:
-        author = Author(result['id'], result['name'], result['age'], result['fav_motto'])
+        author = Author(result['name'], result['age'], result['fav_motto'], result['id'])
         
     return author

@@ -18,19 +18,22 @@ def view_all():
     for book in results:
         author_id = book['author_id']
         author = author_repository.select(author_id)
-        created_book = Book(book['id'], book['title'], author)
+        created_book = Book(book['title'], author, book['id'])
         books.append(created_book)
     return books
 
 def select_all():
     books = []
-
     sql = "SELECT * FROM books"
     results = run_sql(sql)
 
     for row in results:
-        book = Book(row['title'], row['author_id'], row['id'] )
-        print(book)
+        author_id = row['author_id']
+        author = author_repository.select(author_id)
+        #need to insert an author object
+        book = Book(row['title'], author, row['id'] )
+        print("")
+        print(book.__dict__)
         books.append(book)
     return books
 

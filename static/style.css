@@ -39,7 +39,6 @@ body{
     font-size: 100%;
     width : 100%;
     padding: 10px;
-    margin: 10px;
     box-sizing: border-box;
   }
   
@@ -82,3 +81,10 @@ body{
     margin: 0 auto;
   }
   
+  .book_display{
+    width: 100%;
+    background-color: #8899a6;
+    font-size: 13px;
+    margin: 20px;
+    padding: 5px;
+  }

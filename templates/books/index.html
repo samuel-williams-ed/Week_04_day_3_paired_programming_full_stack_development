@@ -2,7 +2,14 @@
 {% block content %}
 
 {% for book in all_books %}
-<h2>{{ book.title }}</h2>
+<div class="book_display">
+    <h2>{{ book.title }}</h2>
+    <p>By: {{ book.author.name }}, {{book.author.age}}</p>
+    <form action="/books/{{book.id}}/delete" method="post">
+        <input type="submit" value="Delete">
+    </form>
+    
+</div>
 
 {% endfor %}
 {% endblock %}
